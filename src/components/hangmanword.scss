@@ -1,0 +1,14 @@
+.Hangmanword{
+  color: red;
+  ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li{
+      font-size: 45px;
+      padding: 10px;
+      margin: 0 10px;
+    }
+  }
+}
