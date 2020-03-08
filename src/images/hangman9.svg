@@ -26,9 +26,6 @@
         <g transform="matrix(0.260189,-0.313544,0.750213,0.62255,103.733,156.497)">
             <rect x="236" y="130" width="14" height="92"/>
         </g>
-        <g transform="matrix(-0.333703,-0.233775,0.559351,-0.798445,289.641,533.208)">
-            <rect x="236" y="130" width="14" height="92"/>
-        </g>
         <use xlink:href="#_Image1" x="293.5" y="95.5" width="85px" height="94px"/>
     </g>
     <defs>
