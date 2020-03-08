@@ -1,15 +1,18 @@
 .Playagain {
-  padding:10px 40px;
+  padding:10px 0px;
   background-color: rgb(255, 247, 7);
   margin:40px auto;
   border-radius: 5px;
-  width:200px;
+  width:250px;
   text-align: center;
   font-weight: 600;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  &.active {
+    width:350px;
+  }
   &:active {
     transform: scale(1.1,1.1);
     background-color: #faab33;

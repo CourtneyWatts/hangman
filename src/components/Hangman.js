@@ -20,7 +20,7 @@ import hangman11 from '../images/hangman11.svg'
 class Hangman extends Component {
   static defaultProps = {
     images: [hangman0,hangman1,hangman2,hangman3,hangman4,hangman5,hangman6,hangman7,hangman8,hangman9,hangman10,hangman11],
-    words: ['Toy Story', 'Shrek', 'Ice Age', 'The Incredibles', 'Wreck It Ralph', 'Frozen', 'How to Train Your Dragon', 'Inside Out', 'Brave', 'Monsters Inc', 'Antz', 'Coco', 'Puss In Boots', 'Kung Fu Panda', 'Tangled', 'Moana', 'Bolt', 'The Lego Movie', 'Finding Dory', 'Zootopia', 'The Adams Family', 'The Secret Life of Pets', 'Trolls', 'Despicable Me', 'The Lion King', 'The Little Mermaid', 'The Nightmare Before Christmas', 'The BFG']
+    words: ['Toy Story', 'Shrek', 'Ice Age', 'The Incredibles', 'Wreck It Ralph', 'Frozen', 'Inside Out', 'Brave', 'Monsters Inc', 'Antz', 'Coco', 'Puss In Boots', 'Kung Fu Panda', 'Tangled', 'Moana', 'Bolt', 'The Lego Movie', 'Finding Dory', 'Zootopia', 'The Adams Family', 'The Secret Life of Pets', 'Trolls', 'Despicable Me', 'The Lion King', 'The Little Mermaid', 'The Nightmare Before Christmas', 'The BFG']
   }
   constructor (props) {
     super(props)
@@ -53,13 +53,23 @@ class Hangman extends Component {
   }
 
   handlePlayagainClick(){
+    let playAgainBtn = document.querySelector('.Playagain')
+    if (playAgainBtn.classList.contains('active')){
+      return
+    }
+    playAgainBtn.classList.add('active')
+    playAgainBtn.innerHTML = 'Generating new word...'
     let idx = Math.floor(Math.random()* this.props.words.length )
     let nextWord = this.props.words[idx]
-    this.setState({
-      answer: nextWord,
-      guessed:[],
-      incorrectlyGuessed:[]
-    })
+    setTimeout(()=> {
+      playAgainBtn.classList.remove('active')
+      this.setState({
+        answer: nextWord,
+        guessed:[],
+        incorrectlyGuessed:[]
+      })
+      
+    }, 1500)
   }
 
   render () {
@@ -90,7 +100,7 @@ class Hangman extends Component {
     })
     
     return (
-      <div className='container Hangman mt-3'>
+      <div className='container game Hangman mt-3'>
         <h1 className='text-center'>Hangman</h1>
         <div className='Hangman-image'>
           <img src={this.props.images[incorrect]} />
@@ -98,7 +108,7 @@ class Hangman extends Component {
 
         <Hangmanword word={wordOnShow} />
         { (gameLost || gameWon) 
-            ?  <h1 className='text-center mt-3'>{gameWon ? 'You Win!' : 'Oh no... you lose'}</h1>
+            ?  <h1 className='text-center mt-3'>{gameWon ? 'You Win!' : 'You lose'}</h1>
             : <Keyboard onClick={this.handleCharacterClick} />
         }
         { (gameLost || gameWon) && <Playagain onClick={this.handlePlayagainClick}/> }
