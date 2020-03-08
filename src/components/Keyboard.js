@@ -16,7 +16,7 @@ class Keyboard extends Component {
       return <li onClick={handleClick} key={i}>{i}</li>
     })
     return (
-      <div className='keyboard'>
+      <div className='keyboard mt-4'>
         <ul>
           {keyboard}
         </ul>
