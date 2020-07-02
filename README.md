@@ -1,3 +1,17 @@
+## Hangman
+
+Try out my Hangman game.
+
+The words all share a common (hidden) theme. Can you guess each word correctly, before you run out of lives ?
+
+Once you have finished a game, just press the play again button to randomly generate a new word (from the dataset).
+
+Hosted at: https://courtneywatts.github.io/hangman/
+
+### Desktop view
+![](images/desktop-view.jpg)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
