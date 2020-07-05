@@ -20,7 +20,7 @@ import hangman11 from '../images/hangman11.svg'
 class Hangman extends Component {
   static defaultProps = {
     images: [hangman0,hangman1,hangman2,hangman3,hangman4,hangman5,hangman6,hangman7,hangman8,hangman9,hangman10,hangman11],
-    words: ['Toy Story', 'Shrek', 'Ice Age', 'The Incredibles', 'Wreck It Ralph', 'Frozen', 'Inside Out', 'Brave', 'Monsters Inc', 'Antz', 'Coco', 'Puss In Boots', 'Kung Fu Panda', 'Tangled', 'Moana', 'Bolt', 'The Lego Movie', 'Finding Dory', 'Zootopia', 'The Adams Family', 'The Secret Life of Pets', 'Trolls', 'Despicable Me', 'The Lion King', 'The Little Mermaid', 'The Nightmare Before Christmas', 'The BFG']
+    words: ['Toy Story', 'Shrek', 'Ice Age', 'The Incredibles', 'Wreck It Ralph', 'Frozen', 'Inside Out', 'Brave', 'Monsters Inc', 'Antz', 'Coco', 'Puss In Boots', 'Kung Fu Panda', 'Tangled', 'Moana', 'Bolt', 'The Lego Movie', 'Finding Dory', 'Zootopia', 'The Adams Family', 'The Secret Life of Pets', 'Trolls', 'Despicable Me', 'The Lion King', 'The Little Mermaid', 'The BFG']
   }
   constructor (props) {
     super(props)
